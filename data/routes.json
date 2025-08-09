@@ -1,0 +1,71 @@
+[
+  {
+    "id": "route.journey1",
+    "journeyId": "journey.1",
+    "segments": [
+      {
+        "from": "place.antioch-syria",
+        "to": "place.seleucia-pieria",
+        "approxDate": 46,
+        "mode": "road",
+        "notes": "Departure port"
+      },
+      { "from": "place.seleucia-pieria", "to": "place.salamis", "approxDate": 46, "mode": "ship", "notes": "crossing to Cyprus" },
+      { "from": "place.salamis", "to": "place.paphos", "approxDate": 46, "mode": "road", "notes": "Across Cyprus" },
+      { "from": "place.paphos", "to": "place.perga", "approxDate": 46, "mode": "ship", "notes": "To Pamphylia" },
+      { "from": "place.perga", "to": "place.pisidian-antioch", "approxDate": 46, "mode": "road", "notes": "Into Pisidia" },
+      { "from": "place.pisidian-antioch", "to": "place.iconium", "approxDate": 47, "mode": "road", "notes": "" },
+      { "from": "place.iconium", "to": "place.lystra", "approxDate": 47, "mode": "road", "notes": "" },
+      { "from": "place.lystra", "to": "place.derbe", "approxDate": 47, "mode": "road", "notes": "" },
+      { "from": "place.derbe", "to": "place.lystra", "approxDate": 48, "mode": "road", "notes": "Returning" },
+      { "from": "place.lystra", "to": "place.iconium", "approxDate": 48, "mode": "road", "notes": "Returning" },
+      { "from": "place.iconium", "to": "place.pisidian-antioch", "approxDate": 48, "mode": "road", "notes": "Returning" },
+      { "from": "place.pisidian-antioch", "to": "place.perga", "approxDate": 48, "mode": "road", "notes": "Returning" },
+      { "from": "place.perga", "to": "place.antioch-syria", "approxDate": 48, "mode": "ship", "notes": "Return to Antioch" }
+    ]
+  },
+  {
+    "id": "route.journey2",
+    "journeyId": "journey.2",
+    "segments": [
+      { "from": "place.antioch-syria", "to": "place.tarsus", "approxDate": 49, "mode": "road", "notes": "Through Syria and Cilicia" },
+      { "from": "place.tarsus", "to": "place.derbe", "approxDate": 49, "mode": "road", "notes": "" },
+      { "from": "place.derbe", "to": "place.lystra", "approxDate": 49, "mode": "road", "notes": "Timothy joins" },
+      { "from": "place.lystra", "to": "place.iconium", "approxDate": 49, "mode": "road", "notes": "" },
+      { "from": "place.iconium", "to": "place.troas", "approxDate": 49, "mode": "road", "notes": "Through Phrygia and Galatia" },
+      { "from": "place.troas", "to": "place.philippi", "approxDate": 49, "mode": "ship", "notes": "Crossing to Macedonia" },
+      { "from": "place.philippi", "to": "place.thessalonica", "approxDate": 49, "mode": "road", "notes": "" },
+      { "from": "place.thessalonica", "to": "place.berea", "approxDate": 49, "mode": "road", "notes": "" },
+      { "from": "place.berea", "to": "place.athens", "approxDate": 50, "mode": "ship", "notes": "To Achaia" },
+      { "from": "place.athens", "to": "place.corinth", "approxDate": 50, "mode": "road", "notes": "" },
+      { "from": "place.corinth", "to": "place.ephesus", "approxDate": 52, "mode": "ship", "notes": "To Asia" },
+      { "from": "place.ephesus", "to": "place.caesarea", "approxDate": 52, "mode": "ship", "notes": "To Judea" },
+      { "from": "place.caesarea", "to": "place.jerusalem", "approxDate": 52, "mode": "road", "notes": "Visit church" },
+      { "from": "place.jerusalem", "to": "place.antioch-syria", "approxDate": 52, "mode": "road", "notes": "Return to Antioch" }
+    ]
+  },
+  {
+    "id": "route.journey3",
+    "journeyId": "journey.3",
+    "segments": [
+      { "from": "place.antioch-syria", "to": "place.tarsus", "approxDate": 53, "mode": "road", "notes": "Through Galatia and Phrygia" },
+      { "from": "place.tarsus", "to": "place.ephesus", "approxDate": 53, "mode": "road", "notes": "" },
+      { "from": "place.ephesus", "to": "place.troas", "approxDate": 56, "mode": "road", "notes": "To Macedonia" },
+      { "from": "place.troas", "to": "place.philippi", "approxDate": 56, "mode": "ship", "notes": "" },
+      { "from": "place.philippi", "to": "place.corinth", "approxDate": 57, "mode": "road", "notes": "Through Macedonia to Greece" },
+      { "from": "place.corinth", "to": "place.philippi", "approxDate": 57, "mode": "ship", "notes": "Return to Macedonia" },
+      { "from": "place.philippi", "to": "place.troas", "approxDate": 57, "mode": "ship", "notes": "" },
+      { "from": "place.troas", "to": "place.caesarea", "approxDate": 57, "mode": "ship", "notes": "Via various ports" },
+      { "from": "place.caesarea", "to": "place.jerusalem", "approxDate": 57, "mode": "road", "notes": "End of journey" }
+    ]
+  },
+  {
+    "id": "route.rome-voyage",
+    "journeyId": "journey.rome-voyage",
+    "segments": [
+      { "from": "place.caesarea", "to": "place.malta", "approxDate": 60, "mode": "ship", "notes": "Shipwreck voyage" },
+      { "from": "place.malta", "to": "place.rome", "approxDate": 61, "mode": "ship", "notes": "After winter, to Rome" }
+    ]
+  }
+]
+

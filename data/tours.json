@@ -1,0 +1,196 @@
+[
+  {
+    "id": "tour.conversion-early-ministry",
+    "title": "Paul's Conversion and Early Ministry",
+    "description": "Follow Paul's transformation from persecutor to preacher, from Damascus to his early ministry years.",
+    "duration": "8 steps",
+    "steps": [
+      {
+        "view": {"lat": 31.7683, "lng": 35.2137, "zoom": 9},
+        "highlights": ["place.jerusalem"],
+        "note": "Paul (then Saul) begins his journey to Damascus with letters from the high priest to arrest Christians.",
+        "citations": ["Acts 9:1-2"]
+      },
+      {
+        "view": {"lat": 33.5138, "lng": 36.2765, "zoom": 10},
+        "highlights": ["place.damascus"],
+        "note": "On the road to Damascus, Paul encounters the risen Christ in a blinding light and is converted.",
+        "citations": ["Acts 9:3-9"]
+      },
+      {
+        "view": {"lat": 33.5138, "lng": 36.2765, "zoom": 12},
+        "highlights": ["place.damascus"],
+        "note": "Ananias heals Paul's blindness and baptizes him. Paul immediately begins preaching in the synagogues.",
+        "citations": ["Acts 9:10-22"]
+      },
+      {
+        "view": {"lat": 33.5138, "lng": 36.2765, "zoom": 10},
+        "highlights": ["place.damascus"],
+        "note": "After facing opposition, Paul escapes Damascus by being lowered in a basket through the city wall.",
+        "citations": ["Acts 9:23-25", "2 Cor 11:32-33"]
+      },
+      {
+        "view": {"lat": 31.7683, "lng": 35.2137, "zoom": 9},
+        "highlights": ["place.jerusalem"],
+        "note": "Paul returns to Jerusalem where Barnabas introduces him to the apostles, vouching for his conversion.",
+        "citations": ["Acts 9:26-30"]
+      },
+      {
+        "view": {"lat": 36.9177, "lng": 34.8956, "zoom": 9},
+        "highlights": ["place.tarsus"],
+        "note": "Paul returns to his hometown Tarsus for several years of preparation and ministry.",
+        "citations": ["Acts 9:30", "Acts 11:25"]
+      },
+      {
+        "view": {"lat": 36.2021, "lng": 36.1604, "zoom": 9},
+        "highlights": ["place.antioch-syria"],
+        "note": "Barnabas brings Paul to Antioch, where they minister together for a year and the disciples are first called 'Christians'.",
+        "citations": ["Acts 11:25-26"]
+      },
+      {
+        "view": {"lat": 31.7683, "lng": 35.2137, "zoom": 8},
+        "highlights": ["place.jerusalem"],
+        "note": "Paul and Barnabas deliver famine relief to Jerusalem, completing Paul's preparation for missionary work.",
+        "citations": ["Acts 11:27-30", "Acts 12:25"]
+      }
+    ]
+  },
+  {
+    "id": "tour.journey1",
+    "title": "First Missionary Journey (46-48 AD)",
+    "description": "Paul and Barnabas's pioneering journey to Cyprus and Asia Minor, establishing the first Gentile churches.",
+    "duration": "10 steps",
+    "steps": [
+      {
+        "view": {"lat": 36.2021, "lng": 36.1604, "zoom": 9},
+        "highlights": ["place.antioch-syria"],
+        "note": "The Holy Spirit calls Paul and Barnabas for missionary work. The church fasts, prays, and sends them out.",
+        "citations": ["Acts 13:1-3"]
+      },
+      {
+        "view": {"lat": 36.1033, "lng": 35.9333, "zoom": 10},
+        "highlights": ["place.seleucia-pieria"],
+        "note": "Paul and Barnabas travel to the port of Seleucia Pieria and sail to Cyprus.",
+        "citations": ["Acts 13:4"]
+      },
+      {
+        "view": {"lat": 35.1833, "lng": 33.9167, "zoom": 9},
+        "highlights": ["place.salamis"],
+        "note": "They arrive in Salamis, Cyprus, and preach in the Jewish synagogues with John Mark assisting.",
+        "citations": ["Acts 13:5"]
+      },
+      {
+        "view": {"lat": 34.7767, "lng": 32.4267, "zoom": 10},
+        "highlights": ["place.paphos"],
+        "note": "In Paphos, Paul confronts the sorcerer Elymas and converts the proconsul Sergius Paulus. Paul begins to be called by his Roman name.",
+        "citations": ["Acts 13:6-12"]
+      },
+      {
+        "view": {"lat": 36.9533, "lng": 30.8533, "zoom": 9},
+        "highlights": ["place.perga"],
+        "note": "They sail to Perga in Pamphylia, where John Mark leaves them and returns to Jerusalem.",
+        "citations": ["Acts 13:13"]
+      },
+      {
+        "view": {"lat": 38.3233, "lng": 31.1833, "zoom": 9},
+        "highlights": ["place.pisidian-antioch"],
+        "note": "In Pisidian Antioch, Paul preaches his first recorded sermon, explaining how Jesus fulfills Old Testament prophecies.",
+        "citations": ["Acts 13:14-52"]
+      },
+      {
+        "view": {"lat": 37.8714, "lng": 32.4843, "zoom": 9},
+        "highlights": ["place.iconium"],
+        "note": "In Iconium, they preach boldly despite opposition, performing signs and wonders.",
+        "citations": ["Acts 14:1-7"]
+      },
+      {
+        "view": {"lat": 37.5767, "lng": 32.4833, "zoom": 10},
+        "highlights": ["place.lystra"],
+        "note": "Paul heals a lame man in Lystra. The crowd thinks they are gods, but later Paul is stoned and left for dead.",
+        "citations": ["Acts 14:8-20"]
+      },
+      {
+        "view": {"lat": 37.2233, "lng": 33.5433, "zoom": 9},
+        "highlights": ["place.derbe"],
+        "note": "In Derbe, they make many disciples and then begin the return journey, strengthening the new churches.",
+        "citations": ["Acts 14:20-23"]
+      },
+      {
+        "view": {"lat": 36.2021, "lng": 36.1604, "zoom": 8},
+        "highlights": ["place.antioch-syria"],
+        "note": "They return to Antioch and report how God had opened the door of faith to the Gentiles.",
+        "citations": ["Acts 14:24-28"]
+      }
+    ]
+  },
+  {
+    "id": "tour.journey2",
+    "title": "Second Missionary Journey (49-52 AD)",
+    "description": "Paul's journey with Silas into Europe, establishing churches in Macedonia and Achaia.",
+    "duration": "12 steps",
+    "steps": [
+      {
+        "view": {"lat": 36.2, "lng": 36.16, "zoom": 8},
+        "highlights": ["place.antioch-syria"],
+        "note": "Start from Antioch, where Paul and Silas began their second journey."
+      },
+      {
+        "view": {"lat": 37.57, "lng": 32.48, "zoom": 9},
+        "highlights": ["place.lystra"],
+        "note": "In Lystra, Timothy joins Paul and Silas."
+      },
+      {
+        "view": {"lat": 39.75, "lng": 26.15, "zoom": 8},
+        "highlights": ["place.troas"],
+        "note": "Paul has a vision of a man from Macedonia, calling them to Europe."
+      },
+      {
+        "view": {"lat": 41.01, "lng": 24.28, "zoom": 10},
+        "highlights": ["place.philippi"],
+        "note": "In Philippi, Lydia is converted, and Paul and Silas are imprisoned but miraculously freed."
+      },
+      {
+        "view": {"lat": 40.64, "lng": 22.94, "zoom": 9},
+        "highlights": ["place.thessalonica"],
+        "note": "Paul preaches in Thessalonica, facing opposition."
+      },
+      {
+        "view": {"lat": 40.52, "lng": 22.2, "zoom": 10},
+        "highlights": ["place.berea"],
+        "note": "The Bereans are praised for eagerly examining the Scriptures."
+      },
+      {
+        "view": {"lat": 37.98, "lng": 23.72, "zoom": 9},
+        "highlights": ["place.athens"],
+        "note": "Paul preaches on Mars Hill in Athens."
+      },
+      {
+        "view": {"lat": 37.94, "lng": 22.93, "zoom": 9},
+        "highlights": ["place.corinth"],
+        "note": "Paul stays in Corinth for a year and a half, meeting Aquila and Priscilla."
+      },
+      {
+        "view": {"lat": 37.94, "lng": 27.36, "zoom": 8},
+        "highlights": ["place.ephesus"],
+        "note": "Paul makes a brief stop in Ephesus on his way back."
+      },
+      {
+        "view": {"lat": 32.49, "lng": 34.89, "zoom": 8},
+        "highlights": ["place.caesarea"],
+        "note": "Paul lands in Caesarea."
+      },
+      {
+        "view": {"lat": 31.76, "lng": 35.21, "zoom": 9},
+        "highlights": ["place.jerusalem"],
+        "note": "Paul goes up to Jerusalem to greet the church."
+      },
+      {
+        "view": {"lat": 36.2, "lng": 36.16, "zoom": 8},
+        "highlights": ["place.antioch-syria"],
+        "note": "Paul returns to Antioch, completing his second journey."
+      }
+    ]
+  }
+]
+
+

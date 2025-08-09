@@ -1,0 +1,65 @@
+[
+  {
+    "id": "journey.1",
+    "label": "First Missionary Journey",
+    "dateRange": { "start": 46, "end": 48 },
+    "summary": "From Antioch through Cyprus and into Galatia.",
+    "eventIds": [
+      "evt.sending-from-antioch",
+      "evt.salamis-synagogue",
+      "evt.paphos-elymas",
+      "evt.perga-john-mark-departs",
+      "evt.pisidian-antioch-sermon",
+      "evt.iconium-opposition",
+      "evt.lystra-lame-man",
+      "evt.derbe-disciples"
+    ],
+    "routeRef": "route.journey1"
+  },
+  {
+    "id": "journey.2",
+    "label": "Second Missionary Journey",
+    "dateRange": { "start": 49, "end": 52 },
+    "summary": "Through Asia Minor and into Greece, establishing churches.",
+    "eventIds": [
+      "evt.paul-silas-depart",
+      "evt.lystra-timothy",
+      "evt.troas-vision",
+      "evt.philippi-lydia",
+      "evt.philippi-jailer",
+      "evt.thessalonica-opposition",
+      "evt.berea-noble-minded",
+      "evt.athens-mars-hill",
+      "evt.corinth-aquila-priscilla",
+      "evt.corinth-gallio"
+    ],
+    "routeRef": "route.journey2"
+  },
+  {
+    "id": "journey.3",
+    "label": "Third Missionary Journey",
+    "dateRange": { "start": 53, "end": 57 },
+    "summary": "Strengthening churches and extended ministry in Ephesus.",
+    "eventIds": [
+      "evt.ephesus-apollos",
+      "evt.ephesus-riot"
+    ],
+    "routeRef": "route.journey3"
+  },
+  {
+    "id": "journey.rome-voyage",
+    "label": "Voyage to Rome",
+    "dateRange": { "start": 60, "end": 61 },
+    "summary": "Paul's journey to Rome as a prisoner.",
+    "eventIds": [
+      "evt.caesarea-imprisonment",
+      "evt.caesarea-festus",
+      "evt.caesarea-agrippa",
+      "evt.malta-shipwreck",
+      "evt.malta-viper",
+      "evt.rome-house-arrest"
+    ],
+    "routeRef": "route.rome-voyage"
+  }
+]
+

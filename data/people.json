@@ -1,0 +1,80 @@
+[
+  {
+    "id": "person.paul",
+    "names": ["Paul", "Saul"],
+    "roles": ["apostle", "missionary"],
+    "notes": "Converted ca. AD 33–36, missionary to the Gentiles.",
+    "citations": ["Acts 9", "Gal 1"]
+  },
+  {
+    "id": "person.barnabas",
+    "names": ["Barnabas"],
+    "roles": ["missionary"],
+    "notes": "Accompanied Paul on his first missionary journey.",
+    "citations": ["Acts 13"]
+  },
+  {
+    "id": "person.silas",
+    "names": ["Silas"],
+    "roles": ["missionary"],
+    "notes": "Accompanied Paul on his second missionary journey.",
+    "citations": ["Acts 15:40"]
+  },
+  {
+    "id": "person.timothy",
+    "names": ["Timothy"],
+    "roles": ["disciple", "companion"],
+    "notes": "Joined Paul in Lystra during the second journey.",
+    "citations": ["Acts 16:1-3"]
+  },
+  {
+    "id": "person.luke",
+    "names": ["Luke"],
+    "roles": ["physician", "historian"],
+    "notes": "Author of the Gospel of Luke and the Book of Acts.",
+    "citations": ["Col 4:14"]
+  },
+  {
+    "id": "person.priscilla",
+    "names": ["Priscilla"],
+    "roles": ["tentmaker", "teacher"],
+    "notes": "Jewish Christian, wife of Aquila, co-worker with Paul.",
+    "citations": ["Acts 18:2-3"]
+  },
+  {
+    "id": "person.aquila",
+    "names": ["Aquila"],
+    "roles": ["tentmaker", "teacher"],
+    "notes": "Jewish Christian, husband of Priscilla, co-worker with Paul.",
+    "citations": ["Acts 18:2-3"]
+  },
+  {
+    "id": "person.lydia",
+    "names": ["Lydia"],
+    "roles": ["seller of purple cloth", "hostess"],
+    "notes": "First convert in Philippi, opened her home to Paul and his companions.",
+    "citations": ["Acts 16:14-15"]
+  },
+  {
+    "id": "person.gallio",
+    "names": ["Gallio"],
+    "roles": ["proconsul"],
+    "notes": "Proconsul of Achaia who dismissed charges against Paul in Corinth.",
+    "citations": ["Acts 18:12-17"]
+  },
+  {
+    "id": "person.agrippa",
+    "names": ["Agrippa", "Herod Agrippa II"],
+    "roles": ["king"],
+    "notes": "Jewish king before whom Paul defended himself.",
+    "citations": ["Acts 25:13-26:32"]
+  },
+  {
+    "id": "person.festus",
+    "names": ["Festus", "Porcius Festus"],
+    "roles": ["procurator"],
+    "notes": "Roman procurator of Judea who heard Paul's case.",
+    "citations": ["Acts 24:27-26:32"]
+  }
+]
+

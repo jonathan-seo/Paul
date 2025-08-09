@@ -1,0 +1,221 @@
+[
+  {
+    "id": "place.damascus",
+    "names": ["Damascus"],
+    "type": "city",
+    "coords": { "lat": 33.5138, "lng": 36.2765 },
+    "province": "Syria",
+    "modernCountry": "Syria",
+    "description": "City where Paul was converted and began preaching.",
+    "citations": ["Acts 9:1-25"]
+  },
+  {
+    "id": "place.jerusalem",
+    "names": ["Jerusalem"],
+    "type": "city",
+    "coords": { "lat": 31.7683, "lng": 35.2137 },
+    "province": "Judea",
+    "modernCountry": "Israel",
+    "description": "Central city for early Christianity, site of many key events.",
+    "citations": ["Acts 1:8", "Acts 15"]
+  },
+  {
+    "id": "place.antioch-syria",
+    "names": ["Antioch", "Antioch of Syria"],
+    "type": "city",
+    "coords": { "lat": 36.2021, "lng": 36.1606 },
+    "province": "Syria",
+    "modernCountry": "Turkey",
+    "description": "Major sending church for Paul and Barnabas.",
+    "citations": ["Acts 13:1-3"]
+  },
+  {
+    "id": "place.tarsus",
+    "names": ["Tarsus"],
+    "type": "city",
+    "coords": { "lat": 36.9175, "lng": 34.9033 },
+    "province": "Cilicia",
+    "modernCountry": "Turkey",
+    "description": "Paul's birthplace.",
+    "citations": ["Acts 9:11", "Acts 21:39"]
+  },
+  {
+    "id": "place.seleucia-pieria",
+    "names": ["Seleucia Pieria"],
+    "type": "port",
+    "coords": { "lat": 36.1033, "lng": 35.9333 },
+    "province": "Syria",
+    "modernCountry": "Turkey",
+    "description": "Port city from which Paul and Barnabas departed on their first journey.",
+    "citations": ["Acts 13:4"]
+  },
+  {
+    "id": "place.salamis",
+    "names": ["Salamis"],
+    "type": "city",
+    "coords": { "lat": 35.1833, "lng": 33.9167 },
+    "province": "Cyprus",
+    "modernCountry": "Cyprus",
+    "description": "First city visited by Paul and Barnabas on Cyprus.",
+    "citations": ["Acts 13:5"]
+  },
+  {
+    "id": "place.paphos",
+    "names": ["Paphos"],
+    "type": "city",
+    "coords": { "lat": 34.7767, "lng": 32.4267 },
+    "province": "Cyprus",
+    "modernCountry": "Cyprus",
+    "description": "Where Paul encountered Elymas the sorcerer.",
+    "citations": ["Acts 13:6-12"]
+  },
+  {
+    "id": "place.perga",
+    "names": ["Perga"],
+    "type": "city",
+    "coords": { "lat": 36.9533, "lng": 30.8533 },
+    "province": "Pamphylia",
+    "modernCountry": "Turkey",
+    "description": "John Mark departed from them here.",
+    "citations": ["Acts 13:13"]
+  },
+  {
+    "id": "place.pisidian-antioch",
+    "names": ["Pisidian Antioch"],
+    "type": "city",
+    "coords": { "lat": 38.3233, "lng": 31.1833 },
+    "province": "Galatia",
+    "modernCountry": "Turkey",
+    "description": "Paul preached a significant sermon here.",
+    "citations": ["Acts 13:14-52"]
+  },
+  {
+    "id": "place.iconium",
+    "names": ["Iconium"],
+    "type": "city",
+    "coords": { "lat": 37.8714, "lng": 32.4843 },
+    "province": "Lycaonia",
+    "modernCountry": "Turkey",
+    "description": "Paul and Barnabas faced opposition and attempted stoning.",
+    "citations": ["Acts 14:1-7"]
+  },
+  {
+    "id": "place.lystra",
+    "names": ["Lystra"],
+    "type": "city",
+    "coords": { "lat": 37.5767, "lng": 32.4833 },
+    "province": "Lycaonia",
+    "modernCountry": "Turkey",
+    "description": "Paul healed a lame man and was later stoned.",
+    "citations": ["Acts 14:8-20"]
+  },
+  {
+    "id": "place.derbe",
+    "names": ["Derbe"],
+    "type": "city",
+    "coords": { "lat": 37.2233, "lng": 33.5433 },
+    "province": "Lycaonia",
+    "modernCountry": "Turkey",
+    "description": "Paul and Barnabas preached the gospel and made many disciples.",
+    "citations": ["Acts 14:20-21"]
+  },
+  {
+    "id": "place.troas",
+    "names": ["Troas"],
+    "type": "city",
+    "coords": { "lat": 39.75, "lng": 26.15 },
+    "province": "Mysia",
+    "modernCountry": "Turkey",
+    "description": "Paul had a vision of a man from Macedonia.",
+    "citations": ["Acts 16:8-10"]
+  },
+  {
+    "id": "place.philippi",
+    "names": ["Philippi"],
+    "type": "city",
+    "coords": { "lat": 41.0167, "lng": 24.2833 },
+    "province": "Macedonia",
+    "modernCountry": "Greece",
+    "description": "First European city where Paul preached, Lydia converted.",
+    "citations": ["Acts 16:11-40"]
+  },
+  {
+    "id": "place.thessalonica",
+    "names": ["Thessalonica"],
+    "type": "city",
+    "coords": { "lat": 40.6401, "lng": 22.9444 },
+    "province": "Macedonia",
+    "modernCountry": "Greece",
+    "description": "Paul preached in the synagogue, faced opposition.",
+    "citations": ["Acts 17:1-9"]
+  },
+  {
+    "id": "place.berea",
+    "names": ["Berea"],
+    "type": "city",
+    "coords": { "lat": 40.5208, "lng": 22.2044 },
+    "province": "Macedonia",
+    "modernCountry": "Greece",
+    "description": "Noble-minded Jews who examined the Scriptures daily.",
+    "citations": ["Acts 17:10-15"]
+  },
+  {
+    "id": "place.athens",
+    "names": ["Athens"],
+    "type": "city",
+    "coords": { "lat": 37.9838, "lng": 23.7275 },
+    "province": "Achaia",
+    "modernCountry": "Greece",
+    "description": "Paul preached on Mars Hill.",
+    "citations": ["Acts 17:16-34"]
+  },
+  {
+    "id": "place.corinth",
+    "names": ["Corinth"],
+    "type": "city",
+    "coords": { "lat": 37.9429, "lng": 22.9346 },
+    "province": "Achaia",
+    "modernCountry": "Greece",
+    "description": "Paul stayed here for a year and a half.",
+    "citations": ["Acts 18:1-18"]
+  },
+  {
+    "id": "place.ephesus",
+    "names": ["Ephesus"],
+    "type": "city",
+    "coords": { "lat": 37.9497, "lng": 27.3639 },
+    "province": "Asia",
+    "modernCountry": "Turkey",
+    "description": "Paul ministered here for over two years.",
+    "citations": ["Acts 19:1-41"]
+  },
+  {
+    "id": "place.caesarea",
+    "names": ["Caesarea"],
+    "type": "city",
+    "coords": { "lat": 32.4947, "lng": 34.8952 },
+    "province": "Judea",
+    "modernCountry": "Israel",
+    "description": "Paul was imprisoned here before being sent to Rome.",
+    "citations": ["Acts 23:23-35", "Acts 24"]
+  },
+  {
+    "id": "place.malta",
+    "names": ["Malta"],
+    "type": "island",
+    "coords": { "lat": 35.9375, "lng": 14.3754 },
+    "modernCountry": "Malta",
+    "description": "Island where Paul was shipwrecked.",
+    "citations": ["Acts 28:1-10"]
+  },
+  {
+    "id": "place.rome",
+    "names": ["Rome"],
+    "type": "city",
+    "coords": { "lat": 41.9028, "lng": 12.4964 },
+    "modernCountry": "Italy",
+    "description": "Paul preached the gospel while under house arrest.",
+    "citations": ["Acts 28:11-31"]
+  }
+]
+

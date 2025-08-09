@@ -1,0 +1,640 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.header-controls {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.style-switcher label {
+    margin-right: 5px;
+}
+
+#map {
+    flex-grow: 1;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.left-sidebar,
+.right-sidebar {
+    background-color: #f4f4f4;
+    padding: 15px;
+    overflow-y: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 500;
+}
+
+.left-sidebar {
+    width: 250px;
+    min-width: 200px;
+}
+
+.right-sidebar {
+    width: 300px;
+    min-width: 250px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 0.8em;
+    z-index: 1000;
+}
+
+/* Layout for main content area */
+.main-content {
+    display: flex;
+    flex-grow: 1;
+}
+
+.leaflet-container {
+    background: #fff;
+}
+
+/* Basic responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    .left-sidebar,
+    .right-sidebar {
+        width: 100%;
+        height: auto;
+        max-height: 30vh; /* Limit height on small screens */
+    }
+}
+
+/* Dark theme (example) */
+body.dark-theme {
+    background-color: #222;
+    color: #eee;
+}
+
+body.dark-theme header,
+body.dark-theme footer {
+    background-color: #111;
+}
+
+body.dark-theme .left-sidebar,
+body.dark-theme .right-sidebar {
+    background-color: #333;
+    color: #eee;
+}
+
+/* Placeholder for future styling */
+.place-card,
+.event-details,
+.person-details,
+.passage-details {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.place-card h3,
+.event-details h3,
+.person-details h3,
+.passage-details h3 {
+    margin-top: 0;
+}
+
+/* Map controls */
+.leaflet-control-container .leaflet-control-zoom {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.leaflet-popup-content-wrapper {
+    border-radius: 5px;
+}
+
+.leaflet-tooltip {
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+.leaflet-marker-icon {
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
+}
+
+/* Flexbox for overall layout */
+.main-container {
+    display: flex;
+    flex: 1;
+}
+
+.left-sidebar {
+    order: 1;
+    width: 250px;
+    min-width: 200px;
+}
+
+#map {
+    order: 2;
+    flex: 1;
+}
+
+.right-sidebar {
+    order: 3;
+    width: 300px;
+    min-width: 250px;
+}
+
+/* Filter styles */
+.timeline-filter, .people-filter, .event-type-filter {
+    margin-bottom: 20px;
+}
+
+.timeline-filter h3, .people-filter h3, .event-type-filter h3 {
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #555;
+}
+
+.timeline-presets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.timeline-presets button {
+    padding: 5px 8px;
+    font-size: 0.8em;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.timeline-presets button:hover {
+    background: #e9e9e9;
+}
+
+.timeline-presets button.active {
+    background: #007cba;
+    color: white;
+    border-color: #005a87;
+}
+
+#people-checkboxes, #event-type-checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#people-checkboxes label, #event-type-checkboxes label {
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+#people-checkboxes input, #event-type-checkboxes input {
+    margin-right: 8px;
+}
+
+/* Tour controls */
+#tour-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tour-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background: #fafafa;
+}
+
+.tour-item h4 {
+    margin: 0 0 5px 0;
+    font-size: 1em;
+}
+
+.tour-controls-buttons {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.tour-controls-buttons button {
+    padding: 5px 10px;
+    font-size: 0.8em;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.tour-controls-buttons button:hover {
+    background: #e9e9e9;
+}
+
+.tour-controls-buttons button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Search results */
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1001;
+    display: none;
+}
+
+.search-result-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.search-result-item:hover {
+    background: #f0f0f0;
+}
+
+.search-result-type {
+    font-size: 0.8em;
+    color: #666;
+    text-transform: uppercase;
+}
+
+/* Context panel styles */
+.place-card, .event-details, .person-details, .passage-details {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.place-card h3, .event-details h3, .person-details h3, .passage-details h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.place-card .place-names {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.place-card .place-location {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.citations {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.citations strong {
+    color: #555;
+}
+
+.deep-link-button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #007cba;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+/* Tour navigation styles */
+.tour-navigation {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.tour-navigation button {
+    padding: 8px 12px;
+    font-size: 0.9em;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.tour-navigation button:hover:not(:disabled) {
+    background: #e9e9e9;
+}
+
+.tour-navigation button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Highlighted marker styles */
+.highlighted-marker {
+    z-index: 1000 !important;
+}
+
+/* Search results positioning */
+.header-controls {
+    position: relative;
+}
+
+.deep-link-button:hover {
+    background: #005a87;
+}
+
+
+
+
+/* Search results styles */
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+}
+
+.search-result-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.search-result-item:hover {
+    background: #f5f5f5;
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.search-result-type {
+    font-size: 0.7em;
+    text-transform: uppercase;
+    color: #666;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+/* Person, passage, and event detail styles */
+.person-details, .passage-details, .event-details {
+    padding: 15px;
+}
+
+.person-names, .person-roles, .event-meta {
+    margin: 10px 0;
+    font-size: 0.9em;
+}
+
+.related-places, .related-events, .cross-references, .citations {
+    margin: 15px 0;
+    font-size: 0.9em;
+}
+
+.related-events ul {
+    margin: 5px 0;
+    padding-left: 20px;
+}
+
+.passage-text {
+    margin: 15px 0;
+    padding: 10px;
+    background: #f9f9f9;
+    border-left: 3px solid #007acc;
+    font-style: italic;
+}
+
+.passage-text a {
+    color: #007acc;
+    text-decoration: none;
+}
+
+.passage-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .left-sidebar, .right-sidebar {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        overflow-y: auto;
+    }
+    
+    .left-sidebar {
+        order: 2;
+    }
+    
+    #map {
+        order: 1;
+        height: 400px;
+        width: 100%;
+    }
+    
+    .right-sidebar {
+        order: 3;
+    }
+    
+    .header-controls {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+    
+    .timeline-presets {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    
+    .timeline-presets button {
+        flex: 1;
+        min-width: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-controls {
+        padding: 10px;
+    }
+    
+    #search-box {
+        width: 100%;
+    }
+    
+    .filters h2, .tour-controls h2 {
+        font-size: 1.1em;
+    }
+    
+    .filters h3, .tour-controls h3 {
+        font-size: 1em;
+    }
+}
+
+/* Accessibility improvements */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Focus indicators */
+button:focus,
+input:focus,
+select:focus {
+    outline: 2px solid #007acc;
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .timeline-presets button {
+        border: 2px solid;
+    }
+    
+    .search-result-item:hover {
+        background: #000;
+        color: #fff;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Dark theme support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1a1a1a;
+        color: #e0e0e0;
+    }
+    
+    .left-sidebar, .right-sidebar {
+        background-color: #2d2d2d;
+        border-color: #444;
+    }
+    
+    .search-results {
+        background: #2d2d2d;
+        border-color: #444;
+    }
+    
+    .search-result-item:hover {
+        background: #3d3d3d;
+    }
+    
+    input, select, button {
+        background-color: #3d3d3d;
+        color: #e0e0e0;
+        border-color: #555;
+    }
+    
+    button:hover {
+        background-color: #4d4d4d;
+    }
+}
+
+/* Print styles */
+@media print {
+    .left-sidebar, .right-sidebar {
+        display: none;
+    }
+    
+    #map {
+        width: 100% !important;
+        height: 80vh !important;
+    }
+    
+    .header-controls {
+        display: none;
+    }
+}
+
+/* Touch device improvements */
+@media (hover: none) and (pointer: coarse) {
+    button, .search-result-item {
+        min-height: 44px;
+        padding: 12px;
+    }
+    
+    .timeline-presets button {
+        min-height: 40px;
+        padding: 10px;
+    }
+}
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul's Missionary Journeys - Interactive Map</title>
+    <meta name="description" content="Explore the missionary journeys of the Apostle Paul through an interactive map with places, people, events, and guided tours.">
+    <meta name="keywords" content="Paul, apostle, missionary journeys, Bible, Christianity, interactive map, Acts">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header role="banner">
+        <h1>Paul's Missionary Journeys</h1>
+        <div class="header-controls">
+            <div class="style-switcher">
+                <label for="map-style">Map Style:</label>
+                <select id="map-style" aria-label="Select map display style">
+                    <option value="light">Light</option>
+                    <option value="terrain">Terrain</option>
+                    <option value="satellite">Satellite</option>
+                </select>
+            </div>
+            <input type="search" id="search-box" placeholder="Search places, people, passages..." 
+                   aria-label="Search places, people, and passages" role="searchbox">
+            <button id="help-button" aria-label="Show help information">?</button>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <aside class="left-sidebar" role="complementary" aria-label="Filters and controls">
+            <div class="filters">
+                <h2>Filters</h2>
+                <div class="timeline-filter">
+                    <h3>Timeline</h3>
+                    <input type="range" id="timeline-slider" min="30" max="70" value="30" step="1" 
+                           aria-label="Timeline filter slider">
+                    <div class="timeline-presets" role="group" aria-label="Timeline preset buttons">
+                        <button data-year="33" aria-label="Filter to year 33 AD">AD 33</button>
+                        <button data-year="46" aria-label="Filter to years 46-48 AD">46-48</button>
+                        <button data-year="49" aria-label="Filter to years 49-52 AD">49-52</button>
+                        <button data-year="53" aria-label="Filter to years 53-57 AD">53-57</button>
+                        <button data-year="59" aria-label="Filter to years 59-62 AD">59-62</button>
+                    </div>
+                </div>
+                <div class="people-filter">
+                    <h3>People</h3>
+                    <div id="people-checkboxes" role="group" aria-label="People filter checkboxes">
+                        <!-- People checkboxes will be populated here -->
+                    </div>
+                </div>
+                <div class="event-type-filter">
+                    <h3>Event Types</h3>
+                    <div id="event-type-checkboxes" role="group" aria-label="Event type filter checkboxes">
+                        <!-- Event type checkboxes will be populated here -->
+                    </div>
+                </div>
+            </div>
+            <div class="tour-controls">
+                <h2>Guided Tours</h2>
+                <div id="tour-list" role="list" aria-label="Available guided tours">
+                    <!-- Tour controls will be populated here -->
+                </div>
+            </div>
+        </aside>
+
+        <main id="map" role="main" aria-label="Interactive map showing Paul's missionary journeys"></main>
+
+        <aside class="right-sidebar" role="complementary" aria-label="Details panel">
+            <div class="context-panel" id="context-panel">
+                <h2>Details</h2>
+                <p>Click on a map marker or select an item from the left sidebar to see details here.</p>
+            </div>
+        </aside>
+    </div>
+
+    <footer role="contentinfo">
+        <p>&copy; 2025 Paul's Journeys. Data from various sources.</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
