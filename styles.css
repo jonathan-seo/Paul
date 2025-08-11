@@ -492,7 +492,7 @@ body.dark-theme .right-sidebar {
     
     #map {
         order: 1;
-        height: 400px;
+        height: calc(var(--vh, 1vh) * 100);
         width: 100%;
     }
     
