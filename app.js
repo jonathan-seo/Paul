@@ -1,5 +1,21 @@
 // app.js - Paul's Missionary Journeys Visualization
 
+// --- Mobile viewport height fix (pairs with CSS using var(--vh)) ---
+function setVh() {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+setVh();
+window.addEventListener('resize', setVh);
+window.addEventListener('orientationchange', () => {
+  setTimeout(() => {
+    setVh();
+    if (map && typeof map.invalidateSize === 'function') {
+      map.invalidateSize();
+    }
+  }, 250);
+});
+
 // Global variables
 let map;
 let currentTileLayer;
@@ -31,13 +47,13 @@ function initMap() {
 
     // Other tile layers
     const terrainLayer = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png', {
-        attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> — Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         subdomains: 'abcd',
         maxZoom: 18
     });
 
     const satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-        attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+        attribution: 'Tiles &copy; Esri — Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
     });
 
     // Set default layer
@@ -47,10 +63,8 @@ function initMap() {
     // Map style switcher logic
     document.getElementById('map-style').addEventListener('change', function(e) {
         const selectedStyle = e.target.value;
-        
         // Remove current layer
         map.removeLayer(currentTileLayer);
-        
         // Add new layer
         if (selectedStyle === 'light') {
             currentTileLayer = lightLayer;
@@ -59,13 +73,18 @@ function initMap() {
         } else if (selectedStyle === 'satellite') {
             currentTileLayer = satelliteLayer;
         }
-        
         currentTileLayer.addTo(map);
+        // Ensure Leaflet recalculates size after any UI change
+        setTimeout(() => map.invalidateSize(), 0);
     });
 
     // Initialize layer groups
     markersLayer = L.layerGroup().addTo(map);
     routesLayer = L.layerGroup().addTo(map);
+
+    // Expose map for debugging and force initial size calc
+    window._paulMap = map;
+    setTimeout(() => map.invalidateSize(), 0);
 }
 
 // Data loading function
@@ -157,7 +176,6 @@ function showPlaceCard(place) {
 // Render places on map
 function renderPlaces() {
     markersLayer.clearLayers();
-    
     placesData.forEach(place => {
         const marker = createPlaceMarker(place);
         markersLayer.addLayer(marker);
@@ -385,7 +403,7 @@ function initTours() {
     });
 }
 
-// Tour functionality (improved implementation)
+// Tour functionality
 let currentTour = null;
 let currentTourStep = 0;
 
@@ -869,6 +887,10 @@ function initTheme() {
         document.body.classList.toggle('dark-theme');
         const isDark = document.body.classList.contains('dark-theme');
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        // After large UI changes, ensure Leaflet recalculates size
+        if (map && typeof map.invalidateSize === 'function') {
+            setTimeout(() => map.invalidateSize(), 0);
+        }
     });
     
     document.body.appendChild(themeToggle);
@@ -882,7 +904,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Handle browser back/forward buttons for deep links
 window.addEventListener('hashchange', handleDeepLinks);
-
 
 // Keyboard navigation support
 function initKeyboardNavigation() {
@@ -953,11 +974,13 @@ function initPerformanceMonitoring() {
         // Report performance metrics
         if ('performance' in window && 'getEntriesByType' in performance) {
             const navigation = performance.getEntriesByType('navigation')[0];
-            console.log('Performance metrics:', {
-                domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-                loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-                totalTime: navigation.loadEventEnd - navigation.fetchStart
-            });
+            if (navigation) {
+                console.log('Performance metrics:', {
+                    domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+                    loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+                    totalTime: navigation.loadEventEnd - navigation.fetchStart
+                });
+            }
         }
     });
 }
@@ -1067,4 +1090,3 @@ function announceToScreenReader(message) {
         }, 1000);
     }
 }
-
